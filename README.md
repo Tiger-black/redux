@@ -355,6 +355,13 @@ Redux 的设计思想很简单，就两句话。
 		component.setState(newState);   
 	}
 
+	1、当我们的页面渲染完成后ul出现了 也就是view
+	2、用户在view里触发了ul上的一些 action
+	3、action将被送到一个叫 reducer 的地方
+	4、reducer更新我们的 store
+	5、store改变 state
+	6、react看到 state发生了变化改变 触发rendr方法 改变ul 改变view
+
 七、实例：计数器
 	下面我们来看一个最简单的实例。
 	const Counter = ({ value }) => (
